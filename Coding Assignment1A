@@ -1,0 +1,57 @@
+package assignment;
+
+import java.util.Scanner;
+
+public class Assignment1A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int item, firstItem, secondItem, thirdItem, fourthItem;
+double priceFirstItem, priceSecondItem, priceThirdItem, priceFourthItem;
+double totalPrice, discount, paid;
+
+
+Scanner scan = new Scanner(System.in);
+
+System.out.println("Enter the number of item:");
+item= scan.nextInt();
+
+System.out.println("Enter price of first item:");
+priceFirstItem= scan.nextDouble();
+
+System.out.println("Enter the quantity of first item:");
+firstItem= scan.nextInt();
+
+System.out.println("Enter price of second item:");
+priceSecondItem= scan.nextDouble();
+
+System.out.println("Enter the quantity of second item:");
+secondItem= scan.nextInt();
+
+System.out.println("Enter price of third item:");
+priceThirdItem= scan.nextDouble();
+
+System.out.println("Enter the quantity of third item:");
+thirdItem= scan.nextInt();
+
+System.out.println("Enter price of fourth item:");
+priceFourthItem= scan.nextDouble();
+
+System.out.println("Enter the quantity of fourth item:");
+fourthItem= scan.nextInt();
+
+totalPrice = (priceFirstItem*firstItem)+(priceSecondItem*secondItem)+(priceThirdItem*thirdItem)+(priceFourthItem*fourthItem);
+System.out.println("Total price: RM"+totalPrice);
+
+if(totalPrice>200)
+	discount = (totalPrice*20)/100;
+
+else discount= (totalPrice*10)/100;
+//20% for more than RM100, 10% for less than RM100
+System.out.println("Discount received:RM "+discount);
+
+paid = totalPrice-discount;
+System.out.println("Price to be paid:RM "+paid);
+	}
+
+}
